@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1077/1077147.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D O M</title>
+</head>
+<body>
+
+    <h1>DOM - document object model</h1>
+    <p>A sigla DOM significa <strong> Document Object Model </strong> , que em português significa Modelo de Documento por Objetos. Trata-se de uma interface de programação que os navegadores utilizam para representar páginas na web.</p>
+
+    <p>Gabrielle Lourenço Moreira</p>
+
+    <div id="mensagem" onclick="mudar()" onmouseenter="sobre()" onmouseout="sair()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quasi fugiat tenetur velit corporis quam corrupti ducimus maxime dolore, tempora recusandae quaerat quidem eaque quia atque. Deleniti quo suscipit labore.</div>
+
+    <script>
+       // window.document.write ('Olá mundo');
+       //document.write (window.document.URL);
+
+       var paragrafo = window.document.getElementsByTagName('p') [0];
+       paragrafo.style.color = '#69a2a8'
+
+       var corpo = window.document.body
+       corpo.style.background = '#c8d9bf'
+
+      // window.document.write(paragrafo.innerText);apenas o conteúdo
+
+       // window.document.write(paragrafo.innerHTML); conteúdo com seus filhos;
+
+       var msg = window.document.getElementById('mensagem')
+       msg.style.background = '#b1ccb4'
+
+       //Eventos -Criar ações através de funções
+
+       function mudar() {
+        msg.innerText = 'Ao clicar com o mouse o texto deve ser alterado';
+       }
+
+       function sobre() {
+        msg.style.background = "white";
+        msg.style.fontFamily = 'Arial'
+       }
+
+       function sair() {
+        msg.style.background = '#b1ccb4'
+       }
+
+       msg.addEventListener ('click', mudar);
+
+
+       
+
+    </script>
+    
+</body>
+</html>
